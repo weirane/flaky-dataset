@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+cd "$(realpath "$(dirname "$0")")"
+
+git clone https://github.com/apache/lucene
+cd lucene
+git checkout 0dad9ddae87beb888b9374f9fb5f223e5940e586
+
+# export PATH=/env/apache-maven-3.8.8/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# export PATH=$JAVA_HOME/bin:$PATH
