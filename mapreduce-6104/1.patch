@@ -1,0 +1,16 @@
+diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/pom.xml b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/pom.xml
+index 0f89bbe38a2..8d447ee10db 100644
+--- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/pom.xml
++++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/pom.xml
+@@ -33,6 +33,11 @@
+   </properties>
+
+   <dependencies>
++    <dependency>
++        <groupId>com.fasterxml.jackson.core</groupId>
++        <artifactId>jackson-databind</artifactId>
++        <version>2.11.0</version>
++    </dependency>
+     <dependency>
+       <groupId>javax.servlet</groupId>
+       <artifactId>servlet-api</artifactId>
