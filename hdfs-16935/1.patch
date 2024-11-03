@@ -1,0 +1,20 @@
+diff --git a/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/fsdataset/impl/TestFsDatasetImpl.java b/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/fsdataset/impl/TestFsDatasetImpl.java
+index d6f42f3d020..e6441a3acf2 100644
+--- a/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/fsdataset/impl/TestFsDatasetImpl.java
++++ b/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/datanode/fsdataset/impl/TestFsDatasetImpl.java
+@@ -1103,7 +1103,7 @@ public void testReportBadBlocks() throws Exception {
+       // Test for the overloaded method reportBadBlocks
+       dataNode.reportBadBlocks(block, dataNode.getFSDataset()
+           .getFsVolumeReferences().get(0));
+-      Thread.sleep(3000);
++      Thread.sleep(30);
+       BlockManagerTestUtil.updateState(cluster.getNamesystem()
+           .getBlockManager());
+       // Verify the bad block has been reported to namenode
+@@ -1925,4 +1925,4 @@ public void delayDeleteReplica() {
+       DataNodeFaultInjector.set(oldInjector);
+     }
+   }
+-}
+\ No newline at end of file
++}
