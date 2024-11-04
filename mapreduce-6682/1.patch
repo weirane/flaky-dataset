@@ -1,0 +1,18 @@
+diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/pom.xml b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/pom.xml
+index 004972a7bc3..58472333699 100644
+--- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/pom.xml
++++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/pom.xml
+@@ -34,6 +34,13 @@
+     <!-- Needed for generating FindBugs warnings using parent pom -->
+     <yarn.basedir>${project.parent.parent.basedir}</yarn.basedir>
+   </properties>
++  <repositories>
++      <repository>
++          <id>conjars.org</id>
++          <url>https://conjars.wensel.net/repo/</url>
++      </repository>
++  </repositories>
++
+ 
+   <dependencies>
+     <dependency>
