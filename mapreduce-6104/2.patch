@@ -1,0 +1,20 @@
+diff --git a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java
+index d2f5e708eb8..96baaad1f19 100644
+--- a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java
++++ b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java
+@@ -810,7 +810,7 @@ public void testJobHistoryMethods() throws Exception {
+   /**
+    * Simple test PartialJob
+    */
+-  @Test(timeout = 1000)
++  @Test(timeout = 400)
+   public void testPartialJob() throws Exception {
+     JobId jobId = new JobIdPBImpl();
+     jobId.setId(0);
+@@ -945,4 +945,4 @@ public void testTaskAttemptUnsuccessfulCompletionWithoutCounters0239() throws IO
+         + jobInfo.getTotalMaps() + " " 
+         + jobInfo.getJobId() ) ;
+       }
+-}
+\ No newline at end of file
++}
