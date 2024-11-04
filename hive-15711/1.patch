@@ -1,0 +1,19 @@
+diff --git a/ql/pom.xml b/ql/pom.xml
+index 489c6f3352..24d321a531 100644
+--- a/ql/pom.xml
++++ b/ql/pom.xml
+@@ -31,6 +31,14 @@
+     <hive.path.to.root>..</hive.path.to.root>
+   </properties>
+ 
++  <repositories>
++    <repository>
++        <id>huaweicloud</id>
++        <url>https://repo.huaweicloud.com/repository/maven/huaweicloudsdk</url>
++    </repository>
++  </repositories>
++
++
+   <dependencies>
+     <!-- dependencies are always listed in sorted order by groupId, artifectId -->
+     <!-- intra-project -->
