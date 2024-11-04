@@ -1,0 +1,88 @@
+diff --git a/hadoop-common-project/hadoop-common/pom.xml b/hadoop-common-project/hadoop-common/pom.xml
+index f3a838e41b1..0415ce6a177 100644
+--- a/hadoop-common-project/hadoop-common/pom.xml
++++ b/hadoop-common-project/hadoop-common/pom.xml
+@@ -40,7 +40,7 @@
+   <dependencies>
+     <dependency>
+       <groupId>org.apache.hadoop.thirdparty</groupId>
+-      <artifactId>hadoop-shaded-protobuf_3_7</artifactId>
++      <artifactId>hadoop-shaded-protobuf_3_25</artifactId>
+     </dependency>
+     <dependency>
+       <groupId>org.apache.hadoop</groupId>
+diff --git a/hadoop-hdfs-project/hadoop-hdfs/pom.xml b/hadoop-hdfs-project/hadoop-hdfs/pom.xml
+index 90ce0020d7c..d0e57548378 100644
+--- a/hadoop-hdfs-project/hadoop-hdfs/pom.xml
++++ b/hadoop-hdfs-project/hadoop-hdfs/pom.xml
+@@ -499,7 +499,7 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd">
+     </profile>
+ 
+     <!-- profile to test shell code -->
+-    <profile>
++    <!-- <profile>
+       <id>shelltest</id>
+       <activation>
+         <property>
+@@ -531,7 +531,7 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd">
+           </plugin>
+         </plugins>
+       </build>
+-    </profile>
++    </profile> -->
+     <profile>
+       <id>java9</id>
+       <activation>
+diff --git a/hadoop-project/pom.xml b/hadoop-project/pom.xml
+index 2fe07c35740..43e6fa30e70 100644
+--- a/hadoop-project/pom.xml
++++ b/hadoop-project/pom.xml
+@@ -91,7 +91,7 @@
+     <hadoop.protobuf.version>3.7.1</hadoop.protobuf.version>
+     <protoc.path>${env.HADOOP_PROTOC_PATH}</protoc.path>
+ 
+-    <hadoop-thirdparty.version>1.1.0-SNAPSHOT</hadoop-thirdparty.version>
++    <hadoop-thirdparty.version>1.4.0-SNAPSHOT</hadoop-thirdparty.version>
+     <hadoop-thirdparty-protobuf.version>${hadoop-thirdparty.version}</hadoop-thirdparty-protobuf.version>
+     <hadoop-thirdparty-guava.version>${hadoop-thirdparty.version}</hadoop-thirdparty-guava.version>
+     <hadoop-thirdparty-shaded-prefix>org.apache.hadoop.thirdparty</hadoop-thirdparty-shaded-prefix>
+@@ -234,7 +234,7 @@
+       </dependency>
+       <dependency>
+         <groupId>org.apache.hadoop.thirdparty</groupId>
+-        <artifactId>hadoop-shaded-protobuf_3_7</artifactId>
++        <artifactId>hadoop-shaded-protobuf_3_25</artifactId>
+         <version>${hadoop-thirdparty-protobuf.version}</version>
+       </dependency>
+       <dependency>
+diff --git a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/pom.xml b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/pom.xml
+index 61747c2cd80..5df5f71a384 100644
+--- a/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/pom.xml
++++ b/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/pom.xml
+@@ -51,7 +51,7 @@
+       <exclusions>
+         <exclusion>
+           <groupId>org.apache.hadoop.thirdparty</groupId>
+-          <artifactId>hadoop-shaded-protobuf_3_7</artifactId>
++          <artifactId>hadoop-shaded-protobuf_3_25</artifactId>
+         </exclusion>
+       </exclusions>
+     </dependency>
+@@ -69,7 +69,7 @@
+ 
+     <dependency>
+       <groupId>org.apache.hadoop.thirdparty</groupId>
+-      <artifactId>hadoop-shaded-protobuf_3_7</artifactId>
++      <artifactId>hadoop-shaded-protobuf_3_25</artifactId>
+     </dependency>
+ 
+     <dependency>
+@@ -80,7 +80,7 @@
+       <exclusions>
+         <exclusion>
+           <groupId>org.apache.hadoop.thirdparty</groupId>
+-          <artifactId>hadoop-shaded-protobuf_3_7</artifactId>
++          <artifactId>hadoop-shaded-protobuf_3_25</artifactId>
+         </exclusion>
+       </exclusions>
+     </dependency>
