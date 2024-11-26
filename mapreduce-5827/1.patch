@@ -1,0 +1,13 @@
+diff --git a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/TestSpeculativeExecutionWithMRApp.java b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/TestSpeculativeExecutionWithMRApp.java
+index 7179a2bdfe0..e6a87e39f27 100644
+--- a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/TestSpeculativeExecutionWithMRApp.java
++++ b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/TestSpeculativeExecutionWithMRApp.java
+@@ -105,7 +105,7 @@ public void testSpeculateSuccessfulWithoutUpdateEvents() throws Exception {
+       }
+     }
+ 
+-    int maxTimeWait = 10;
++    int maxTimeWait = 3;
+     boolean successfullySpeculated = false;
+     TaskAttempt[] ta = null;
+     while (maxTimeWait > 0 && !successfullySpeculated) {

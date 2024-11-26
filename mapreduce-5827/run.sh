@@ -9,6 +9,7 @@ cd code
 git checkout 06c15b6a3e07bfbdb5ef4db697737a7b0765da74
 
 # patch
+git apply ../1.patch
 
 # compile
 mvn -Dhttps.protocols=TLSv1.2 clean install -DskipTests -pl hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient -am
