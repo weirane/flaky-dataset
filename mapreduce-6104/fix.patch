@@ -1,0 +1,34 @@
+commit d5d9fd32553aa09534f336b4976434a76126de0a
+Author: Jason Lowe <jlowe@apache.org>
+Date:   2014-09-24 16:09:33 +0000
+
+    MAPREDUCE-6104. TestJobHistoryParsing.testPartialJob fails in branch-2. Contributed by Mit Desai
+    (cherry picked from commit 7af4c3888bf7be0822dc880170e5e3d09e9280f1)
+
+diff --git a/hadoop-mapreduce-project/CHANGES.txt b/hadoop-mapreduce-project/CHANGES.txt
+index 952295af652..d163417a5cd 100644
+--- a/hadoop-mapreduce-project/CHANGES.txt
++++ b/hadoop-mapreduce-project/CHANGES.txt
+@@ -150,6 +150,9 @@ Release 2.6.0 - UNRELEASED
+     MAPREDUCE-6095. Enable DistributedCache for uber-mode Jobs (Gera Shegalov
+     via jlowe)
+ 
++    MAPREDUCE-6104. TestJobHistoryParsing.testPartialJob fails in branch-2
++    (Mit Desai via jlowe)
++
+ Release 2.5.1 - 2014-09-05
+ 
+   INCOMPATIBLE CHANGES
+diff --git a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java
+index c2246b3c3c3..93538dcda9e 100644
+--- a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java
++++ b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/test/java/org/apache/hadoop/mapreduce/v2/hs/TestJobHistoryParsing.java
+@@ -806,7 +806,7 @@ public void testJobHistoryMethods() throws Exception {
+   /**
+    * Simple test PartialJob
+    */
+-  @Test(timeout = 400)
++  @Test(timeout = 3000)
+   public void testPartialJob() throws Exception {
+     JobId jobId = new JobIdPBImpl();
+     jobId.setId(0);

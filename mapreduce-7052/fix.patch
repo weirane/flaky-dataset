@@ -1,0 +1,21 @@
+commit a87bccdc3f5419fd68f802798c6c891460cb71fa
+Author: Jason Lowe <jlowe@apache.org>
+Date:   2018-02-15 15:12:57 -0600
+
+    MAPREDUCE-7052. TestFixedLengthInputFormat#testFormatCompressedIn is flaky. Contributed by Peter Bacsko
+    
+    (cherry picked from commit a53d62ab26e170a0338f93e228718da52e9196e4)
+
+diff --git a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/TestFixedLengthInputFormat.java b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/TestFixedLengthInputFormat.java
+index 8013feb1ba2..6281e71ef50 100644
+--- a/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/TestFixedLengthInputFormat.java
++++ b/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/TestFixedLengthInputFormat.java
+@@ -300,7 +300,7 @@ private void runRandomTests(CompressionCodec codec) throws IOException {
+       if (i > 0) {
+         if (i == (MAX_TESTS-1)) {
+           // Test a split size that is less than record len
+-          numSplits = (int)(fileSize/Math.floor(recordLength/2));
++          numSplits = (int)(fileSize/ Math.max(1, Math.floor(recordLength/2)));
+         } else {
+           if (MAX_TESTS % i == 0) {
+             // Let us create a split size that is forced to be 
