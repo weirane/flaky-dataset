@@ -21,3 +21,10 @@ cd /repos/<issue-id>
 # run test
 ./runtest.sh
 ```
+
+To run the test with developer's fix:
+
+```sh
+git -C code apply fix.patch
+./runtest.sh
+```
